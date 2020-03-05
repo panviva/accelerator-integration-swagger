@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Panviva API Suite v3.4.0",
+    "title": "Panviva API Suite v3",
     "version": "1.0",
-    "description": "This API Suite contains a complete list of Panviva's API offerings.\r\n\r\n**Content APIs** perform resource related operations within Panviva products, e.g. `document`, `folder`, `file`, `container`, `image`.\r\n\r\n**Live APIs** enable real-time communications with online users on our client application.\r\n\r\n**Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator."
+    "description": "This connector allows you to consume a complete list of Panviva's API offerings.\r\n\r\n**Content APIs** perform resource related operations within Panviva products, e.g. `document`, `folder`, `file`, `container`, `image`.\r\n\r\n**Live APIs** enable real-time communications with online users on our client application.\r\n\r\n**Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator."
   },
   "host": "api.panviva.com",
   "basePath": "/v3",
