@@ -10,26 +10,8 @@
   "schemes": [
     "https"
   ],
-  "securityDefinitions": {
-    "apiKeyHeader": {
-      "type": "apiKey",
-      "name": "Ocp-Apim-Subscription-Key",
-      "in": "header"
-    },
-    "apiKeyQuery": {
-      "type": "apiKey",
-      "name": "subscription-key",
-      "in": "query"
-    }
-  },
-  "security": [
-    {
-      "apiKeyHeader": []
-    },
-    {
-      "apiKeyQuery": []
-    }
-  ],
+  "consumes": [],
+  "produces": [],
   "paths": {
     "/{instance}/operations/search": {
       "get": {
@@ -41,6 +23,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -48,6 +31,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Term",
             "name": "term",
             "in": "query",
             "description": "The word or phrase to be searched for",
@@ -55,12 +39,14 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Page Offset",
             "name": "pageOffset",
             "in": "query",
             "description": "The pagination offset to denote the number of initial search results to skip. For example, pageOffset of 100 and pageLimit of 10 would return records 101-110.",
             "type": "integer"
           },
           {
+            "x-ms-summary": "Page Limit",
             "name": "pageLimit",
             "in": "query",
             "description": "The number of records to return. Must be an integer between 0 and 1000.",
@@ -222,17 +208,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -262,6 +239,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -269,42 +247,49 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Simple Query",
             "name": "simplequery",
             "in": "query",
             "description": "Natural language query string. For example: ```Action Movies```. (Note: Use simplequery OR advancedquery, not both.)",
             "type": "string"
           },
           {
+            "x-ms-summary": "Advanced Query",
             "name": "advancedquery",
             "in": "query",
             "description": "Query string written in Lucene query syntax. For example: ```films AND \"a story\"```. (Note: Use simplequery OR advancedquery, not both.)",
             "type": "string"
           },
           {
+            "x-ms-summary": "Filter",
             "name": "filter",
             "in": "query",
             "description": "Accepts a Lucene-formatted filter string. Examples: ```category eq 'Mortgages'```, ```panvivaDocumentVersion gt '8'```. (Filterable fields include dateCreated, dateModified, dateDeleted, categoryJson, queryVariationsJson, title, category, primaryQuery, isDeleted, timestamp, panvivaDocumentId, panvivaDocumentVersion, id)",
             "type": "string"
           },
           {
+            "x-ms-summary": "Channel",
             "name": "channel",
             "in": "query",
             "description": "Return response for a specific channel, instead of the default",
             "type": "string"
           },
           {
+            "x-ms-summary": "Page Offset",
             "name": "pageOffset",
             "in": "query",
             "description": "The pagination offset to denote the number of initial search results to skip. For example, pageOffset of 100 and pageLimit of 10 would return records 101-110.",
             "type": "integer"
           },
           {
+            "x-ms-summary": "Page Limit",
             "name": "pageLimit",
             "in": "query",
             "description": "The number of records to return. Must be an integer between 0 and 1000.",
             "type": "integer"
           },
           {
+            "x-ms-summary": "Facet",
             "name": "facet",
             "in": "query",
             "description": "Accepts a Lucene-formatted facet string. Examples: ```facet=Category,count:10&amp;facet=Rating```. (Facetable fields include metaData/values)",
@@ -428,17 +413,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -468,6 +444,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -553,17 +530,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -593,6 +561,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -678,17 +647,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -718,6 +678,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -803,17 +764,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -843,6 +795,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -911,17 +864,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -951,6 +895,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -958,6 +903,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The id of a document container",
@@ -1036,17 +982,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1076,6 +1013,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -1083,6 +1021,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "A document unique identifier, Document ID. If a document is a translated document, this value represents Internal ID or IID in Panviva API v1.",
@@ -1090,6 +1029,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Version",
             "name": "version",
             "in": "query",
             "description": "Request the API to return a particular version of the specified document.",
@@ -1229,17 +1169,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1269,6 +1200,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -1276,6 +1208,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "Format - uuid. The id (ID) of an artefact",
@@ -1426,17 +1359,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1466,6 +1390,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -1473,6 +1398,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The internal id (IID) of a Panviva document",
@@ -1565,17 +1491,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1605,6 +1522,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -1612,6 +1530,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The internal id (IID) of a Panviva document",
@@ -1710,17 +1629,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1750,6 +1660,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -1757,6 +1668,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The internal id (IID) of a Panviva document.",
@@ -1778,8 +1690,8 @@
                 "translations": [
                   {
                     "id": "568",
-                    "name": "Univers cinÃ©matographique Marvel. (Films)",
-                    "description": "Marvel Cinematic Universe (MCU) est une franchise de médias américains et un univers partagé centré sur une série de films de super héros.",
+                    "name": "Univers cin\u00c3\u00a9matographique Marvel. (Films)",
+                    "description": "Marvel Cinematic Universe (MCU) est une franchise de m\u00e9dias am\u00e9ricains et un univers partag\u00e9 centr\u00e9 sur une s\u00e9rie de films de super h\u00e9ros.",
                     "version": 52,
                     "language": "fr-FR",
                     "tags": [
@@ -1807,7 +1719,7 @@
                       "forcePageSequence": true,
                       "forceQuestionSequence": true,
                       "passingScore": 10,
-                      "successFeedback": "Un grand pouvoir implique de grandes responsabilités"
+                      "successFeedback": "Un grand pouvoir implique de grandes responsabilit\u00e9s"
                     },
                     "keywords": [
                       "Iron Man",
@@ -1897,17 +1809,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1937,6 +1840,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -1944,6 +1848,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The internal id (IID) of a Panviva file (external document)",
@@ -2051,17 +1956,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2091,6 +1987,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -2098,6 +1995,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The internal id (IID) of a Panviva folder",
@@ -2202,17 +2100,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2242,6 +2131,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -2249,6 +2139,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The internal id (IID) of a Panviva folder",
@@ -2346,17 +2237,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2386,6 +2268,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -2393,6 +2276,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The internal id (IID) of a Panviva folder",
@@ -2501,17 +2385,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2541,6 +2416,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -2645,17 +2521,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2685,6 +2552,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -2692,6 +2560,7 @@
             "type": "string"
           },
           {
+            "x-ms-summary": "Id",
             "name": "id",
             "in": "path",
             "description": "The id of a Panviva image",
@@ -2774,17 +2643,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2814,6 +2674,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -2895,17 +2756,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2933,6 +2785,7 @@
         ],
         "parameters": [
           {
+            "x-ms-summary": "Instance",
             "name": "instance",
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
@@ -3021,17 +2874,8 @@
               }
             }
           },
-          "422": {
-            "description": "Unprocessable Entity - The request was well-formed but was unable to be followed due to semantic errors.",
-            "examples": {
-              "application/json": {
-                "errorCode": "422",
-                "message": "Unprocessable Entity"
-              }
-            }
-          },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -4103,5 +3947,27 @@
       }
     }
   },
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Ocp-Apim-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    },
+    {
+      "apiKeyQuery": []
+    }
+  ],
   "tags": []
 }

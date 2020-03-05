@@ -1,0 +1,9 @@
+{
+  "connectorId": "shared_panviva-5f2a25cdaa281ec29e-5fbcff80ed3f3beaf0",
+  "environment": "Default-f581c58f-0b7f-401e-8ace-7cefeee8838b",
+  "apiProperties": "apiProperties.json",
+  "apiDefinition": "apiDefinition.swagger.json",
+  "icon": "icon.png",
+  "powerAppsUrl": "https://api.powerapps.com",
+  "powerAppsApiVersion": "2016-11-01"
+}
