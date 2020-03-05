@@ -16,7 +16,7 @@
     "/{instance}/operations/search": {
       "get": {
         "description": "Searches documents, folders, and files (external documents) for a term and returns paginated results",
-        "operationId": "5e4a27c6c52b891bc004a5fe",
+        "operationId": "operationsSearch",
         "summary": "Search",
         "tags": [
           "Operations"
@@ -233,7 +233,7 @@
     "/{instance}/operations/artefact/nls": {
       "get": {
         "description": "Return search results for a given query",
-        "operationId": "5e4a27c7c52b891bc004a5ff",
+        "operationId": "operationsArtefactNls",
         "summary": "Search Artefacts",
         "tags": [
           "Operations"
@@ -439,7 +439,7 @@
     "/{instance}/operations/live/csh": {
       "post": {
         "description": "Present a CSH search result page of the passing query on Panviva client to specified user on Panviva client",
-        "operationId": "5e4a27c7c52b891bc004a600",
+        "operationId": "operationsLiveCsh",
         "summary": "Live CSH",
         "tags": [
           "Operations"
@@ -557,7 +557,7 @@
     "/{instance}/operations/live/document": {
       "post": {
         "description": "Present a document page to specified user on Panviva client",
-        "operationId": "5e4a27c7c52b891bc004a601",
+        "operationId": "operationsLiveDocument",
         "summary": "Live Document",
         "tags": [
           "Operations"
@@ -675,7 +675,7 @@
     "/{instance}/operations/live/search": {
       "post": {
         "description": "Present a search result page of the passing query on Panviva client to specified user on Panviva client",
-        "operationId": "5e4a27c7c52b891bc004a602",
+        "operationId": "operationsLiveSearch",
         "summary": "Live Search",
         "tags": [
           "Operations"
@@ -790,111 +790,10 @@
         }
       }
     },
-    "/{instance}/operations/echo": {
-      "get": {
-        "description": "Echo a request to verify connectivity with the Panviva API",
-        "operationId": "5e4a27c7c52b891bc004a603",
-        "summary": "Echo",
-        "tags": [
-          "Operations"
-        ],
-        "parameters": [
-          {
-            "x-ms-summary": "Instance",
-            "x-ms-url-encoding": "single",
-            "name": "instance",
-            "in": "path",
-            "description": "The instance name as shown on the Panviva Developer Portal.",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload."
-          },
-          "400": {
-            "description": "Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications.",
-            "examples": {
-              "application/json": {
-                "errorCode": "400",
-                "message": "Bad Request"
-              }
-            }
-          },
-          "403": {
-            "description": "Out of call volume quota.",
-            "examples": {
-              "application/json": {
-                "errorCode": "403",
-                "message": "Out of call volume quota"
-              }
-            }
-          },
-          "404": {
-            "description": "Document not found - The server has not found anything matching the request URI.",
-            "examples": {
-              "application/json": {
-                "errorCode": "404",
-                "message": "Not Found"
-              }
-            }
-          },
-          "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
-            "examples": {
-              "application/json": {
-                "errorCode": "405",
-                "message": "Method Not Allowed"
-              }
-            }
-          },
-          "406": {
-            "description": "Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type.",
-            "examples": {
-              "application/json": {
-                "errorCode": "406",
-                "message": "Not Acceptable"
-              }
-            }
-          },
-          "415": {
-            "description": "Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json.",
-            "examples": {
-              "application/json": {
-                "errorCode": "415",
-                "message": "Unsupported Media Type"
-              }
-            }
-          },
-          "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
-            "examples": {
-              "application/json": {
-                "errorCode": "429",
-                "message": "Too Many Requests"
-              }
-            }
-          },
-          "503": {
-            "description": "Service Unavailable - Panviva servers are under maintenance.",
-            "examples": {
-              "application/json": {
-                "errorCode": "503",
-                "message": "Service Unavailable"
-              }
-            }
-          }
-        }
-      }
-    },
     "/{instance}/resources/container/{id}": {
       "get": {
         "description": "Return a container using the container ID provided",
-        "operationId": "5e4a27c7c52b891bc004a604",
+        "operationId": "resourcesContainerById",
         "summary": "Container",
         "tags": [
           "Resources"
@@ -1014,7 +913,7 @@
     "/{instance}/resources/document/{id}": {
       "get": {
         "description": "Return a document using the document ID provided",
-        "operationId": "5e4a27c7c52b891bc004a605",
+        "operationId": "resourcesDocumentById",
         "summary": "Document",
         "tags": [
           "Resources"
@@ -1203,7 +1102,7 @@
     "/{instance}/resources/artefact/{id}": {
       "get": {
         "description": "Return an artefact using the ID provided",
-        "operationId": "5e4a27c7c52b891bc004a606",
+        "operationId": "resourcesArtefactById",
         "summary": "Artefact",
         "tags": [
           "Resources"
@@ -1395,7 +1294,7 @@
     "/{instance}/resources/document/{id}/containers": {
       "get": {
         "description": "Return a list of containers using the document ID provided",
-        "operationId": "5e4a27c7c52b891bc004a607",
+        "operationId": "resourcesDocumentByIdContainers",
         "summary": "Document Containers",
         "tags": [
           "Resources"
@@ -1529,7 +1428,7 @@
     "/{instance}/resources/document/{id}/containers/relationships": {
       "get": {
         "description": "Return a list of the parent-child relationship between each container for the document ID provided",
-        "operationId": "5e4a27c7c52b891bc004a608",
+        "operationId": "resourcesDocumentByIdContainersRelationships",
         "summary": "Document Container Relationships",
         "tags": [
           "Resources"
@@ -1669,7 +1568,7 @@
     "/{instance}/resources/document/{id}/translations": {
       "get": {
         "description": "Return a list of all translations (per language and locale) of a Panviva document",
-        "operationId": "5e4a27c7c52b891bc004a609",
+        "operationId": "resourcesDocumentByIdTranslations",
         "summary": "Document Translations",
         "tags": [
           "Resources"
@@ -1851,7 +1750,7 @@
     "/{instance}/resources/file/{id}": {
       "get": {
         "description": "Returns a file (external document) from Panviva",
-        "operationId": "5e4a27c7c52b891bc004a60a",
+        "operationId": "resourcesFileById",
         "summary": "File",
         "tags": [
           "Resources"
@@ -2000,7 +1899,7 @@
     "/{instance}/resources/folder/{id}": {
       "get": {
         "description": "Return information about a Panviva folder and references to each of its direct children",
-        "operationId": "5e4a27c7c52b891bc004a60b",
+        "operationId": "resourcesFolderById",
         "summary": "Folder",
         "tags": [
           "Resources"
@@ -2146,7 +2045,7 @@
     "/{instance}/resources/folder/{id}/children": {
       "get": {
         "description": "Gets all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)",
-        "operationId": "5e4a27c7c52b891bc004a60c",
+        "operationId": "resourcesFolderByIdChildren",
         "summary": "Folder Children",
         "tags": [
           "Resources"
@@ -2285,7 +2184,7 @@
     "/{instance}/resources/folder/{id}/translations": {
       "get": {
         "description": "Gets all the translations of a Panviva folder, along with each translated folders respective children",
-        "operationId": "5e4a27c7c52b891bc004a60d",
+        "operationId": "resourcesFolderByIdTranslations",
         "summary": "Folder Translations",
         "tags": [
           "Resources"
@@ -2435,7 +2334,7 @@
     "/{instance}/resources/folder/root": {
       "get": {
         "description": "Gets the root/home folder in all of Panviva, which can be drilled into using the Get Folder Children endpoint. Note this endpoint was formerly referred to as the 'Folder Search' endpoint",
-        "operationId": "5e4a27c7c52b891bc004a60e",
+        "operationId": "resourcesFolderRoot",
         "summary": "Folder Root",
         "tags": [
           "Resources"
@@ -2572,7 +2471,7 @@
     "/{instance}/resources/image/{id}": {
       "get": {
         "description": "Returns an image from Panviva. Image data is represented as a base64 string",
-        "operationId": "5e4a27c7c52b891bc004a60f",
+        "operationId": "resourcesImageById",
         "summary": "Image",
         "tags": [
           "Resources"
@@ -2696,8 +2595,8 @@
     "/{instance}/resources/artefactcategory": {
       "get": {
         "description": "Gets a list of all available artefact categories",
-        "operationId": "5e4a27c7c52b891bc004a610",
-        "summary": "Get Artefact Category",
+        "operationId": "resourcesArtefactCategoriesGet",
+        "summary": "Get Artefact Categories",
         "tags": [
           "Resources"
         ],
@@ -2808,7 +2707,7 @@
       },
       "post": {
         "description": "Creates a category for classifying artefacts",
-        "operationId": "5e4a27c7c52b891bc004a611",
+        "operationId": "resourcesArtefactCategoryPost",
         "summary": "Create Artefact Category",
         "tags": [
           "Resources"
