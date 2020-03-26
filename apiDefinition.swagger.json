@@ -3,7 +3,7 @@
   "info": {
     "title": "Panviva API Suite v3",
     "version": "1.0",
-    "description": "Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further  and consume a complete list of Panviva's API offerings.\n\n**Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.\n\n**Live APIs** enable real-time communications with online users on our client application.\n\n**Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator."
+    "description": "Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings.\n\n**Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.\n\n**Live APIs** enable real-time communications with online users on our client application.\n\n**Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator."
   },
   "host": "api.panviva.com",
   "basePath": "/v3",
