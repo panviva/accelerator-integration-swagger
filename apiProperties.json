@@ -16,6 +16,8 @@
       }
     },
     "iconBrandColor": "#265173",
-    "capabilities": []
+    "capabilities": [],
+    "publisher": "Panviva Pty Ltd",
+    "stackOwner": "Panviva Pty Ltd"
   }
 }
