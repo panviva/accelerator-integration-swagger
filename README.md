@@ -9,9 +9,9 @@ Wouldn't it be great if you could share information seamlessly? This connector a
 
 ## Prerequisites
 
-... Pending
+To use the Panviva connector, you must have an active Panviva API Subscription (also known as an API Plan) and valid Panviva API Credentials.
 
-Provide information about any prerequisites that are required to use this connector. For example, an account on your website, a paid service plan, and so on. 
+If you are not a customer or need help visit [www.panviva.com/support](https://www.panviva.com/support).
 
 ## How to get credentials
 
