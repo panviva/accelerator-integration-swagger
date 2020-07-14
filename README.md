@@ -9,36 +9,41 @@ Wouldn't it be great if you could share information seamlessly? This connector a
 
 ## Prerequisites
 
-To use the Panviva connector, you must have an active Panviva API Subscription (also known as an API Plan) and valid Panviva API Credentials.
+To use the Panviva connector, you must have:
+1. Access to a Panviva Instance (also known as a Tenant)
+2. A developer account on the Panviva Developer Portal [https://dev.panviva.com](https://dev.panviva.com)
+3. An active Panviva API Subscription (also known as an API Plan) and valid Panviva API Credentials
 
 If you are not a customer or need help visit [www.panviva.com/support](https://www.panviva.com/support).
 
 ## How to get credentials
 
-... Pending
+Follow steps below to get your API Key & API Instance.
 
-Provide detailed information about how a user can get credentials to leverage the connector. Where possible, this should be step-by-step instructions with links pointing to relevant parts of your website.
+If you see an error while using the connector you may look up the error code for more information. Note the HTTP status code in the documentation may be slightly different than what you see in Power Automate or Power Apps, please use the Error Code field for lookup purposes.
 
-If your connector doesn't require authentication, this section can be removed.
+To get your API Key you must:
+1. Sign into the Panviva Developer Portal at [https://dev.panviva.com](https://dev.panviva.com)
+2. Navigate to your Profile (click your name then click "Profile" from the top navigation bar)
+3. Your should now see your Api Key under "Your Subscriptions" section of your profile.
+
+To get your API Instance you must:
+1. Sign into the Panviva Developer Portal at [https://dev.panviva.com](https://dev.panviva.com)
+2. Navigate to your API (click "APIS" from the top navigation bar)
+3. You should now see your API Instance under your API Suite (look for "*The instance name for the API Suite is*")
 
 ## Known issues and limitations
 
-... Pending
+Note that your throttling limits will be based on the type of API Subscription (or API Plan) to which you've subscribed.
 
-If your connector has any known issues and limitations, include a detailed description of them here.
+To find your Quota or Rate Limit you can:
+1. Sign into the Panviva Developer Portal at [https://dev.panviva.com](https://dev.panviva.com)
+2. Navigate to your Profile (click your name then click "Profile" from the top navigation bar)
+3. Go to your Api Plan under "Your Subscriptions" section of your profile
+4. You should now see the details of your plan (look for "*...will be able to run __ calls/minute up to a maximum of ___ calls/month...*")
 
-## Technical Details
-### Version: 1.0
 
-### Security
-**apiKeyHeader**  
-
-|apiKey|*API Key*|
-|---|---|
-|Name|Ocp-Apim-Subscription-Key|
-|In|header|
-
-## Operations
+## Actions
 
 ... Pending 
 
