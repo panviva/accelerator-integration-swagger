@@ -48,7 +48,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Term",
@@ -56,21 +57,24 @@
             "in": "query",
             "description": "The word or phrase to be searched for",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Page Offset",
             "name": "pageOffset",
             "in": "query",
             "description": "The pagination offset to denote the number of initial search results to skip. For example, pageOffset of 100 and pageLimit of 10 would return records 101-110.",
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "advanced"
           },
           {
             "x-ms-summary": "Page Limit",
             "name": "pageLimit",
             "in": "query",
             "description": "The number of records to return. Must be an integer between 0 and 1000.",
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "advanced"
           }
         ],
         "produces": [
@@ -246,7 +250,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "important"
       }
     },
     "/{instance}/operations/artefact/nls": {
@@ -265,56 +270,64 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Simple Query",
             "name": "simplequery",
             "in": "query",
             "description": "Natural language query string. For example: ```Action Movies```. (Note: Use simplequery OR advancedquery, not both.)",
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Advanced Query",
             "name": "advancedquery",
             "in": "query",
             "description": "Query string written in Lucene query syntax. For example: ```films AND \"a story\"```. (Note: Use simplequery OR advancedquery, not both.)",
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "advanced"
           },
           {
             "x-ms-summary": "Filter",
             "name": "filter",
             "in": "query",
             "description": "Accepts a Lucene-formatted filter string. Examples: ```category eq 'Mortgages'```, ```panvivaDocumentVersion gt '8'```. (Filterable fields include dateCreated, dateModified, dateDeleted, categoryJson, queryVariationsJson, title, category, primaryQuery, isDeleted, timestamp, panvivaDocumentId, panvivaDocumentVersion, id)",
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "advanced"
           },
           {
             "x-ms-summary": "Channel",
             "name": "channel",
             "in": "query",
             "description": "Return response for a specific channel, instead of the default",
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Page Offset",
             "name": "pageOffset",
             "in": "query",
             "description": "The pagination offset to denote the number of initial search results to skip. For example, pageOffset of 100 and pageLimit of 10 would return records 101-110.",
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "advanced"
           },
           {
             "x-ms-summary": "Page Limit",
             "name": "pageLimit",
             "in": "query",
             "description": "The number of records to return. Must be an integer between 0 and 1000.",
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "advanced"
           },
           {
             "x-ms-summary": "Facet",
             "name": "facet",
             "in": "query",
             "description": "Accepts a Lucene-formatted facet string. Examples: ```facet=Category,count:10&amp;facet=Rating```. (Facetable fields include metaData/values)",
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "advanced"
           }
         ],
         "produces": [
@@ -452,7 +465,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "important"
       }
     },
     "/{instance}/operations/live/csh": {
@@ -471,7 +485,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "name": "postLiveCshRequest",
@@ -479,7 +494,8 @@
             "schema": {
               "$ref": "#/definitions/PostLiveCshRequest"
             },
-            "description": "JSON object containing information required to perform a live activity<span>:</span>"
+            "description": "JSON object containing information required to perform a live activity<span>:</span>",
+            "x-ms-visibility": "important"
           }
         ],
         "consumes": [
@@ -570,7 +586,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "important"
       }
     },
     "/{instance}/operations/live/document": {
@@ -589,7 +606,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "name": "postLiveDocumentRequest",
@@ -597,7 +615,8 @@
             "schema": {
               "$ref": "#/definitions/PostLiveDocumentRequest"
             },
-            "description": "JSON object containing information required to perform a live activity<span>:</span>"
+            "description": "JSON object containing information required to perform a live activity<span>:</span>",
+            "x-ms-visibility": "important"
           }
         ],
         "consumes": [
@@ -688,7 +707,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "important"
       }
     },
     "/{instance}/operations/live/search": {
@@ -707,7 +727,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "name": "postLiveSearchRequest",
@@ -715,7 +736,8 @@
             "schema": {
               "$ref": "#/definitions/PostLiveSearchRequest"
             },
-            "description": "JSON object containing information required to perform a live activity<span>:</span>"
+            "description": "JSON object containing information required to perform a live activity<span>:</span>",
+            "x-ms-visibility": "important"
           }
         ],
         "consumes": [
@@ -806,7 +828,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "important"
       }
     },
     "/{instance}/resources/container/{id}": {
@@ -825,7 +848,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -834,7 +858,8 @@
             "in": "path",
             "description": "The id of a document container",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -926,7 +951,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/document/{id}": {
@@ -945,7 +971,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -954,14 +981,16 @@
             "in": "path",
             "description": "A document unique identifier, Document ID. If a document is a translated document, this value represents Internal ID or IID in Panviva API v1.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Version",
             "name": "version",
             "in": "query",
             "description": "Request the API to return a particular version of the specified document.",
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "advanced"
           }
         ],
         "produces": [
@@ -1115,7 +1144,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/artefact/{id}": {
@@ -1134,7 +1164,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -1143,7 +1174,8 @@
             "in": "path",
             "description": "Format - uuid. The id (ID) of an artefact",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -1307,7 +1339,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/document/{id}/containers": {
@@ -1326,7 +1359,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -1335,7 +1369,8 @@
             "in": "path",
             "description": "The internal id (IID) of a Panviva document",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -1441,7 +1476,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/document/{id}/containers/relationships": {
@@ -1460,7 +1496,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -1469,7 +1506,8 @@
             "in": "path",
             "description": "The internal id (IID) of a Panviva document",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -1600,7 +1638,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -1609,7 +1648,8 @@
             "in": "path",
             "description": "The internal id (IID) of a Panviva document.",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -1763,7 +1803,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/file/{id}": {
@@ -1782,7 +1823,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -1791,7 +1833,8 @@
             "in": "path",
             "description": "The internal id (IID) of a Panviva file (external document)",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -1912,7 +1955,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "important"
       }
     },
     "/{instance}/resources/folder/{id}": {
@@ -1931,7 +1975,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -1940,7 +1985,8 @@
             "in": "path",
             "description": "The internal id (IID) of a Panviva folder",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -2058,7 +2104,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/folder/{id}/children": {
@@ -2077,7 +2124,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -2086,7 +2134,8 @@
             "in": "path",
             "description": "The internal id (IID) of a Panviva folder",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -2197,7 +2246,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/folder/{id}/translations": {
@@ -2216,7 +2266,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -2225,7 +2276,8 @@
             "in": "path",
             "description": "The internal id (IID) of a Panviva folder",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -2347,7 +2399,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/folder/root": {
@@ -2366,7 +2419,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -2484,7 +2538,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     },
     "/{instance}/resources/image/{id}": {
@@ -2503,7 +2558,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "x-ms-summary": "Id",
@@ -2512,7 +2568,8 @@
             "in": "path",
             "description": "The id of a Panviva image",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -2608,7 +2665,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "important"
       }
     },
     "/{instance}/resources/artefactcategory": {
@@ -2627,7 +2685,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           }
         ],
         "produces": [
@@ -2722,7 +2781,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "important"
       },
       "post": {
         "description": "Creates a category for classifying artefacts",
@@ -2739,7 +2799,8 @@
             "in": "path",
             "description": "The instance name as shown on the Panviva Developer Portal.",
             "required": true,
-            "type": "string"
+            "type": "string",
+            "x-ms-visibility": "important"
           },
           {
             "name": "postArtefactCategoryRequest",
@@ -2841,7 +2902,8 @@
               }
             }
           }
-        }
+        },
+        "x-ms-visibility": "advanced"
       }
     }
   },
@@ -3903,19 +3965,11 @@
       "type": "apiKey",
       "name": "Ocp-Apim-Subscription-Key",
       "in": "header"
-    },
-    "apiKeyQuery": {
-      "type": "apiKey",
-      "name": "subscription-key",
-      "in": "query"
     }
   },
   "security": [
     {
       "apiKeyHeader": []
-    },
-    {
-      "apiKeyQuery": []
     }
   ],
   "tags": []
