@@ -17,6 +17,20 @@
   ],
   "consumes": [],
   "produces": [],
+  "x-ms-connector-metadata": [
+    {
+      "propertyName": "Website",
+      "propertyValue": "https://www.panviva.com"
+    },
+    {
+      "propertyName": "Privacy policy",
+      "propertyValue": "https://www.panviva.com/privacy-policy"
+    },
+    {
+      "propertyName": "Categories",
+      "propertyValue": "Business Management;Productivity"
+    }
+  ],
   "paths": {
     "/{instance}/operations/search": {
       "get": {
