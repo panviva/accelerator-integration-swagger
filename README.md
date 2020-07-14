@@ -7,7 +7,28 @@ Wouldn't it be great if you could share information seamlessly? This connector a
 
 **Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator.
 
-## Version: 1.0
+## Prerequisites
+
+... Pending
+
+Provide information about any prerequisites that are required to use this connector. For example, an account on your website, a paid service plan, and so on. 
+
+## How to get credentials
+
+... Pending
+
+Provide detailed information about how a user can get credentials to leverage the connector. Where possible, this should be step-by-step instructions with links pointing to relevant parts of your website.
+
+If your connector doesn't require authentication, this section can be removed.
+
+## Known issues and limitations
+
+... Pending
+
+If your connector has any known issues and limitations, include a detailed description of them here.
+
+## Technical Details
+### Version: 1.0
 
 ### Security
 **apiKeyHeader**  
@@ -16,6 +37,12 @@ Wouldn't it be great if you could share information seamlessly? This connector a
 |---|---|
 |Name|Ocp-Apim-Subscription-Key|
 |In|header|
+
+## Operations
+
+... Pending 
+
+Add a table/list here for ease of use.
 
 ### /{instance}/operations/search
 
