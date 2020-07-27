@@ -20,7 +20,7 @@ After that is completed, you can create and test the connector.
 Run the following commands and follow the prompts:
 
 ```paconn
-paconn create --api-def apiDefinition.swagger.json --api-prop apiProperties.json --secret <client_secret>
+paconn create --api-def apiDefinition.swagger.json --api-prop apiProperties.json 
 ```
 
 ## Supported Actions
