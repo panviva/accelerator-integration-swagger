@@ -1,11 +1,8 @@
 # Panviva
-Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings.
-
-**Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.
-
-**Live APIs** enable real-time communications with online users on our client application.
-
-**Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator.
+Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings within your application, or in your process automation. Explore the following APIs with this connector:
+* **Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.
+* **Live APIs** enable real-time communications with online users on our client application.
+* **Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator.
 
 ## Prerequisites
 
@@ -45,27 +42,32 @@ To find your Quota or Rate Limit you can:
 
 ## Actions
 The connector supports the following Actions:
-* **Search Operations**
-  * `Search`: Searches documents, folders, and files (external documents) for a term and returns paginated results
-  * `Search Artefacts`: Return search results for a given query
-* **Live Operations**
-  * `Live CSH`: Present a CSH search result page of the passing query on Panviva client to specified user on Panviva client
-  * `Live Document`: Present a document page to specified user on Panviva client\
-  * `Live Search`: Present a search result page of the passing query on Panviva client to specified user on Panviva
-* **Document Operations**
-  * `Document`: Return a document using the document ID provided
-  * `Document Containers`: Return a list of containers using the document ID provided
-  * `Document Container Relationships`: Return a list of the parent-child relationship between each container for the document ID provided
-  * `Container`: Return a container using the container ID provided
-  * `Document Translations`: Return a list of all translations (per language and locale) of a Panviva document
-* **Resource Operations**
-  * `Artefact`: Return an artefact using the ID provided
-  * `File`: Returns a file (external document) from Panviva
-  * `Folder`: Return information about a Panviva folder and references to each of its direct children
-  * `Folder Children`: Gets all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)
-  * `Folder Translations`: Gets all the translations of a Panviva folder, along with each translated folders respective children
-  * `Folder Root`: Gets the root/home folder in all of Panviva, which can be drilled into using the Get Folder Children endpoint. Note this endpoint was formerly referred to as the 'Folder Search' endpoint
-  * `Image`: Returns an image from Panviva. Image data is represented as a base64 string
+* [**Search Operations**](#search-operations)
+  * [`Search`](#search-instanceoperationssearch): Searches documents, folders, and files (external documents) for a term and returns paginated results
+  * [`Search Artefacts`](#search-artefacts-instanceoperationsartefactnls): Return search results for a given query
+* [**Live Operations**](#live-operations)
+  * [`Live CSH`](#live-csh-instanceoperationslivecsh): Present a CSH search result page of the passing query on Panviva client to specified user on Panviva client
+  * [`Live Document`](#live-document-instanceoperationslivedocument): Present a document page to specified user on Panviva client\
+  * [`Live Search`](#live-search-instanceoperationslivesearch): Present a search result page of the passing query on Panviva client to specified user on Panviva
+* [**Document Operations**](#document-operations)
+  * [`Document`](#document-instanceresourcesdocumentid): Return a document using the document ID provided
+  * [`Document Containers`](#document-containers-instanceresourcesdocumentidcontainers): Return a list of containers using the document ID provided
+  * [`Document Container Relationships`](#document-container-relationships-instanceresourcesdocumentidcontainersrelationships): Return a list of the parent-child relationship between each container for the document ID provided
+  * [`Container`](#container-instanceresourcescontainerid): Return a container using the container ID provided
+  * [`Document Translations`](#document-translations-instanceresourcesdocumentidtranslations): Return a list of all translations (per language and locale) of a Panviva document
+* [**Resource Operations**](#resource-operations)
+  * [`Artefact`](#artefact-instanceresourcesartefactid): Return an artefact using the ID provided
+  * [`Artefact Categories`](#artefact-categories-instanceresourcesartefactcategory): Gets a list of all available artefact categories
+  * [`File`](#file-instanceresourcesfileid): Returns a file (external document) from Panviva
+  * [`Folder`](#folder-instanceresourcesfolderid): Return information about a Panviva folder and references to each of its direct children
+  * [`Folder Children`](#folder-children-instanceresourcesfolderidchildren): Gets all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)
+  * [`Folder Translations`](#folder-translations-instanceresourcesfolderidtranslations): Gets all the translations of a Panviva folder, along with each translated folders respective children
+  * [`Folder Root`](#folder-root-instanceresourcesfolderroot): Gets the root/home folder in all of Panviva, which can be drilled into using the Get Folder Children endpoint. Note this endpoint was formerly referred to as the 'Folder Search' endpoint
+  * [`Image`](#image-instanceresourcesimageid): Returns an image from Panviva. Image data is represented as a base64 string
+
+The abovementioned actions have been described in detail below.
+
+## Search Operations
 
 ### Search `/{instance}/operations/search`
 
@@ -133,6 +135,10 @@ Return search results for a given query
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
+
+
+
+## Live Operations
 ### Live CSH `/{instance}/operations/live/csh`
 
 #### POST
@@ -220,34 +226,8 @@ Present a search result page of the passing query on Panviva client to specified
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### Container `/{instance}/resources/container/{id}`
 
-#### GET
-
-##### Description:
-
-Return a container using the container ID provided
-
-##### Parameters
-
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| instance | path | The instance name as shown on the Panviva Developer Portal. | Yes | string |
-| id | path | The id of a document container | Yes | string |
-
-##### Responses
-
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload. | [GetContainerResponse](#getcontainerresponse) |
-| 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
-| 403 | Out of call volume quota. |  |
-| 404 | Document not found - The server has not found anything matching the request URI. |  |
-| 405 | Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.  |  |
-| 406 | Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type. |  |
-| 415 | Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json. |  |
-| 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
-| 503 | Service Unavailable - Panviva servers are under maintenance. |  |
+## Document Operations
 
 ### Document `/{instance}/resources/document/{id}`
 
@@ -270,35 +250,6 @@ Return a document using the document ID provided
 | Code | Description | Schema |
 | ---- | ----------- | ------ |
 | 200 | The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload. | [GetDocumentResponse](#getdocumentresponse) |
-| 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
-| 403 | Out of call volume quota. |  |
-| 404 | Document not found - The server has not found anything matching the request URI. |  |
-| 405 | Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.  |  |
-| 406 | Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type. |  |
-| 415 | Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json. |  |
-| 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
-| 503 | Service Unavailable - Panviva servers are under maintenance. |  |
-
-### Artefact `/{instance}/resources/artefact/{id}`
-
-#### GET
-
-##### Description:
-
-Return an artefact using the ID provided
-
-##### Parameters
-
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| instance | path | The instance name as shown on the Panviva Developer Portal. | Yes | string |
-| id | path | Format - uuid. The id (ID) of an artefact | Yes | string |
-
-##### Responses
-
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload. | [GetResponseResponse](#getresponseresponse) |
 | 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
 | 403 | Out of call volume quota. |  |
 | 404 | Document not found - The server has not found anything matching the request URI. |  |
@@ -337,6 +288,7 @@ Return a list of containers using the document ID provided
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
+
 ### Document Container Relationships `/{instance}/resources/document/{id}/containers/relationships`
 
 #### GET
@@ -366,6 +318,36 @@ Return a list of the parent-child relationship between each container for the do
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
+
+### Container `/{instance}/resources/container/{id}`
+
+#### GET
+
+##### Description:
+
+Return a container using the container ID provided
+
+##### Parameters
+
+| Name | Located in | Description | Required | Schema |
+| ---- | ---------- | ----------- | -------- | ---- |
+| instance | path | The instance name as shown on the Panviva Developer Portal. | Yes | string |
+| id | path | The id of a document container | Yes | string |
+
+##### Responses
+
+| Code | Description | Schema |
+| ---- | ----------- | ------ |
+| 200 | The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload. | [GetContainerResponse](#getcontainerresponse) |
+| 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
+| 403 | Out of call volume quota. |  |
+| 404 | Document not found - The server has not found anything matching the request URI. |  |
+| 405 | Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.  |  |
+| 406 | Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type. |  |
+| 415 | Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json. |  |
+| 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
+| 503 | Service Unavailable - Panviva servers are under maintenance. |  |
+
 ### Document Translations `/{instance}/resources/document/{id}/translations`
 
 #### GET
@@ -386,6 +368,94 @@ Return a list of all translations (per language and locale) of a Panviva documen
 | Code | Description | Schema |
 | ---- | ----------- | ------ |
 | 200 | The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload. | [GetDocumentTranslationsResponse](#getdocumenttranslationsresponse) |
+| 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
+| 403 | Out of call volume quota. |  |
+| 404 | Document not found - The server has not found anything matching the request URI. |  |
+| 405 | Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.  |  |
+| 406 | Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type. |  |
+| 415 | Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json. |  |
+| 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
+| 503 | Service Unavailable - Panviva servers are under maintenance. |  |
+
+
+## Resource Operations
+
+### Artefact `/{instance}/resources/artefact/{id}`
+
+#### GET
+
+##### Description:
+
+Return an artefact using the ID provided
+
+##### Parameters
+
+| Name | Located in | Description | Required | Schema |
+| ---- | ---------- | ----------- | -------- | ---- |
+| instance | path | The instance name as shown on the Panviva Developer Portal. | Yes | string |
+| id | path | Format - uuid. The id (ID) of an artefact | Yes | string |
+
+##### Responses
+
+| Code | Description | Schema |
+| ---- | ----------- | ------ |
+| 200 | The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload. | [GetResponseResponse](#getresponseresponse) |
+| 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
+| 403 | Out of call volume quota. |  |
+| 404 | Document not found - The server has not found anything matching the request URI. |  |
+| 405 | Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.  |  |
+| 406 | Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type. |  |
+| 415 | Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json. |  |
+| 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
+| 503 | Service Unavailable - Panviva servers are under maintenance. |  |
+
+
+### Artefact Categories `/{instance}/resources/artefactcategory`
+
+#### GET
+
+##### Description:
+
+Gets a list of all available artefact categories
+
+##### Parameters
+
+| Name | Located in | Description | Required | Schema |
+| ---- | ---------- | ----------- | -------- | ---- |
+| instance | path | The instance name as shown on the Panviva Developer Portal. | Yes | string |
+
+##### Responses
+
+| Code | Description | Schema |
+| ---- | ----------- | ------ |
+| 200 | The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload. | [GetArtefactCategoriesResponse](#getartefactcategoriesresponse) |
+| 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
+| 403 | Out of call volume quota. |  |
+| 404 | Document not found - The server has not found anything matching the request URI. |  |
+| 405 | Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.  |  |
+| 406 | Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type. |  |
+| 415 | Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json. |  |
+| 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
+| 503 | Service Unavailable - Panviva servers are under maintenance. |  |
+
+#### POST
+
+##### Description:
+
+Creates a category for classifying artefacts
+
+##### Parameters
+
+| Name | Located in | Description | Required | Schema |
+| ---- | ---------- | ----------- | -------- | ---- |
+| instance | path | The instance name as shown on the Panviva Developer Portal. | Yes | string |
+| postArtefactCategoryRequest | body | JSON object containing the category name | No | [PostArtefactCategoryRequest](#postartefactcategoryrequest) |
+
+##### Responses
+
+| Code | Description | Schema |
+| ---- | ----------- | ------ |
+| 201 | Success | [PostArtefactCategoryResponse](#postartefactcategoryresponse) |
 | 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
 | 403 | Out of call volume quota. |  |
 | 404 | Document not found - The server has not found anything matching the request URI. |  |
@@ -568,60 +638,6 @@ Returns an image from Panviva. Image data is represented as a base64 string
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### Artefact Categories `/{instance}/resources/artefactcategory`
-
-#### GET
-
-##### Description:
-
-Gets a list of all available artefact categories
-
-##### Parameters
-
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| instance | path | The instance name as shown on the Panviva Developer Portal. | Yes | string |
-
-##### Responses
-
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 200 | The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload. | [GetArtefactCategoriesResponse](#getartefactcategoriesresponse) |
-| 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
-| 403 | Out of call volume quota. |  |
-| 404 | Document not found - The server has not found anything matching the request URI. |  |
-| 405 | Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.  |  |
-| 406 | Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type. |  |
-| 415 | Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json. |  |
-| 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
-| 503 | Service Unavailable - Panviva servers are under maintenance. |  |
-
-#### POST
-
-##### Description:
-
-Creates a category for classifying artefacts
-
-##### Parameters
-
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| instance | path | The instance name as shown on the Panviva Developer Portal. | Yes | string |
-| postArtefactCategoryRequest | body | JSON object containing the category name | No | [PostArtefactCategoryRequest](#postartefactcategoryrequest) |
-
-##### Responses
-
-| Code | Description | Schema |
-| ---- | ----------- | ------ |
-| 201 | Success | [PostArtefactCategoryResponse](#postartefactcategoryresponse) |
-| 400 | Bad Request - The request could not be understood by the server due to malformed syntax. The client should not repeat the request without modifications. |  |
-| 403 | Out of call volume quota. |  |
-| 404 | Document not found - The server has not found anything matching the request URI. |  |
-| 405 | Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.  |  |
-| 406 | Not Acceptable - The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request. If accept headers is specified, application/json must be the only media type. |  |
-| 415 | Unsupported Media Type - The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method. The only supported media type is application/json. |  |
-| 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
-| 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
 ### Models
 
