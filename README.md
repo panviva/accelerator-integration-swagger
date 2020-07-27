@@ -23,7 +23,27 @@ Run the following commands and follow the prompts:
 paconn create --api-def apiDefinition.swagger.json --api-prop apiProperties.json --secret <client_secret>
 ```
 
-## Supported Operations
-The connector supports the following operations:
-* `Search`: Searches documents, folders, and files (external documents) for a term and returns paginated results
-* `Search Artefacts`: Return search results for a given query
+## Supported Actions
+The connector supports the following Actions:
+* **Search Operations**
+  * `Search`: Searches documents, folders, and files (external documents) for a term and returns paginated results
+  * `Search Artefacts`: Return search results for a given query
+* **Live Operations**
+ * `Live CSH`: Present a CSH search result page of the passing query on Panviva client to specified user on Panviva client
+ * `Live Document`: Present a document page to specified user on Panviva client\
+ * `Live Search`: Present a search result page of the passing query on Panviva client to specified user on Panviva
+* **Document Operations**
+  * `Document`: Return a document using the document ID provided
+  * `Document Containers`: Return a list of containers using the document ID provided
+  * `Document Container Relationships`: Return a list of the parent-child relationship between each container for the document ID provided
+  * `Container`: Return a container using the container ID provided
+  * `Document Translations`: Return a list of all translations (per language and locale) of a Panviva document
+* **Resource Operations**
+  * `Artefact`: Return an artefact using the ID provided
+  * `File`: Returns a file (external document) from Panviva
+  * `Folder`: Return information about a Panviva folder and references to each of its direct children
+  * `Folder Children`: Gets all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)
+  * `Folder Translations`: Gets all the translations of a Panviva folder, along with each translated folders respective children
+  * `Folder Root`: Gets the root/home folder in all of Panviva, which can be drilled into using the Get Folder Children endpoint. Note this endpoint was formerly referred to as the 'Folder Search' endpoint
+  * `Image`: Returns an image from Panviva. Image data is represented as a base64 string
+  
