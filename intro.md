@@ -1,5 +1,5 @@
 # Panviva
-Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume the complete list of Panviva's API offerings.
+Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings.
 
 **Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.
 
@@ -7,28 +7,47 @@ Wouldn't it be great if you could share information seamlessly? This connector a
 
 **Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator.
 
-## In this article
-- About this connector
-- Creating a connection
-- Throttling Limits
-- Actions
+## Prerequisites
 
-### About this connector
-To use this integration, you need to have an account on the Panviva Developer Hub. Follow steps below to get your API Key and Instance.
+To use the Panviva connector, you must have:
+1. Access to a Panviva Instance (also known as a Tenant)
+2. A developer account on the Panviva Developer Portal [https://dev.panviva.com](https://dev.panviva.com)
+3. An active Panviva API Subscription (also known as an API Plan) and valid Panviva API Credentials
 
-- Register for a Panviva Developer Account at [https://dev.panviva.com](https://dev.panviva.com)
-- ... more to come
+If you are not a customer or need help visit [www.panviva.com/support](https://www.panviva.com/support).
+
+## How to get credentials
+
+Follow steps below to get your API Key & API Instance.
 
 If you see an error while using the connector you may look up the error code for more information. Note the HTTP status code in the documentation may be slightly different than what you see in Power Automate or Power Apps, please use the Error Code field for lookup purposes.
 
-### Security
-**apiKeyHeader**  
+To get your API Key you must:
+1. Sign into the Panviva Developer Portal at [https://dev.panviva.com](https://dev.panviva.com)
+2. Navigate to your Profile (click your name then click "Profile" from the top navigation bar)
+3. Your should now see your Api Key under "Your Subscriptions" section of your profile.
 
-|apiKey|*API Key*|
-|---|---|
-|Name|Ocp-Apim-Subscription-Key|
-|In|header|
+To get your API Instance you must:
+1. Sign into the Panviva Developer Portal at [https://dev.panviva.com](https://dev.panviva.com)
+2. Navigate to your API (click "APIS" from the top navigation bar)
+3. You should now see your API Instance under your API Suite (look for "*The instance name for the API Suite is*")
 
+## Known issues and limitations
+
+Note that your throttling limits will be based on the type of API Subscription (or API Plan) to which you've subscribed.
+
+To find your Quota or Rate Limit you can:
+1. Sign into the Panviva Developer Portal at [https://dev.panviva.com](https://dev.panviva.com)
+2. Navigate to your Profile (click your name then click "Profile" from the top navigation bar)
+3. Go to your Api Plan under "Your Subscriptions" section of your profile
+4. You should now see the details of your plan (look for "*...will be able to run __ calls/minute up to a maximum of ___ calls/month...*")
+
+
+## Actions
+
+... Pending 
+
+Add a table/list here for ease of use.
 
 ### /{instance}/operations/search
 
