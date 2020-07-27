@@ -49,9 +49,9 @@ The connector supports the following Actions:
   * `Search`: Searches documents, folders, and files (external documents) for a term and returns paginated results
   * `Search Artefacts`: Return search results for a given query
 * **Live Operations**
- * `Live CSH`: Present a CSH search result page of the passing query on Panviva client to specified user on Panviva client
- * `Live Document`: Present a document page to specified user on Panviva client\
- * `Live Search`: Present a search result page of the passing query on Panviva client to specified user on Panviva
+  * `Live CSH`: Present a CSH search result page of the passing query on Panviva client to specified user on Panviva client
+  * `Live Document`: Present a document page to specified user on Panviva client\
+  * `Live Search`: Present a search result page of the passing query on Panviva client to specified user on Panviva
 * **Document Operations**
   * `Document`: Return a document using the document ID provided
   * `Document Containers`: Return a list of containers using the document ID provided
