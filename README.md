@@ -40,6 +40,7 @@ The connector supports the following Actions:
   * `Document Translations`: Return a list of all translations (per language and locale) of a Panviva document
 * **Resource Operations**
   * `Artefact`: Return an artefact using the ID provided
+  * `Artefact Categories`: Gets a list of all available artefact categories
   * `File`: Returns a file (external document) from Panviva
   * `Folder`: Return information about a Panviva folder and references to each of its direct children
   * `Folder Children`: Gets all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)
