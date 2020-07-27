@@ -44,17 +44,32 @@ To find your Quota or Rate Limit you can:
 
 
 ## Actions
+The connector supports the following Actions:
+* **Search Operations**
+  * `Search`: Searches documents, folders, and files (external documents) for a term and returns paginated results
+  * `Search Artefacts`: Return search results for a given query
+* **Live Operations**
+ * `Live CSH`: Present a CSH search result page of the passing query on Panviva client to specified user on Panviva client
+ * `Live Document`: Present a document page to specified user on Panviva client\
+ * `Live Search`: Present a search result page of the passing query on Panviva client to specified user on Panviva
+* **Document Operations**
+  * `Document`: Return a document using the document ID provided
+  * `Document Containers`: Return a list of containers using the document ID provided
+  * `Document Container Relationships`: Return a list of the parent-child relationship between each container for the document ID provided
+  * `Container`: Return a container using the container ID provided
+  * `Document Translations`: Return a list of all translations (per language and locale) of a Panviva document
+* **Resource Operations**
+  * `Artefact`: Return an artefact using the ID provided
+  * `File`: Returns a file (external document) from Panviva
+  * `Folder`: Return information about a Panviva folder and references to each of its direct children
+  * `Folder Children`: Gets all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)
+  * `Folder Translations`: Gets all the translations of a Panviva folder, along with each translated folders respective children
+  * `Folder Root`: Gets the root/home folder in all of Panviva, which can be drilled into using the Get Folder Children endpoint. Note this endpoint was formerly referred to as the 'Folder Search' endpoint
+  * `Image`: Returns an image from Panviva. Image data is represented as a base64 string
 
-... Pending 
-
-Add a table/list here for ease of use.
-
-### /{instance}/operations/search
+### Search `/{instance}/operations/search`
 
 #### GET
-##### Summary:
-
-Search
 
 ##### Description:
 
@@ -83,12 +98,9 @@ Searches documents, folders, and files (external documents) for a term and retur
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/operations/artefact/nls
+### Search Artefacts `/{instance}/operations/artefact/nls`
 
 #### GET
-##### Summary:
-
-Search Artefacts
 
 ##### Description:
 
@@ -121,12 +133,9 @@ Return search results for a given query
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/operations/live/csh
+### Live CSH `/{instance}/operations/live/csh`
 
 #### POST
-##### Summary:
-
-Live CSH
 
 ##### Description:
 
@@ -153,12 +162,9 @@ Present a CSH search result page of the passing query on Panviva client to speci
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/operations/live/document
+### Live Document `/{instance}/operations/live/document`
 
 #### POST
-##### Summary:
-
-Live Document
 
 ##### Description:
 
@@ -185,12 +191,9 @@ Present a document page to specified user on Panviva client
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/operations/live/search
+### Live Search `/{instance}/operations/live/search`
 
 #### POST
-##### Summary:
-
-Live Search
 
 ##### Description:
 
@@ -217,12 +220,9 @@ Present a search result page of the passing query on Panviva client to specified
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/container/{id}
+### Container `/{instance}/resources/container/{id}`
 
 #### GET
-##### Summary:
-
-Container
 
 ##### Description:
 
@@ -249,12 +249,9 @@ Return a container using the container ID provided
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/document/{id}
+### Document `/{instance}/resources/document/{id}`
 
 #### GET
-##### Summary:
-
-Document
 
 ##### Description:
 
@@ -282,12 +279,9 @@ Return a document using the document ID provided
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/artefact/{id}
+### Artefact `/{instance}/resources/artefact/{id}`
 
 #### GET
-##### Summary:
-
-Artefact
 
 ##### Description:
 
@@ -314,12 +308,9 @@ Return an artefact using the ID provided
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/document/{id}/containers
+### Document Containers `/{instance}/resources/document/{id}/containers`
 
 #### GET
-##### Summary:
-
-Document Containers
 
 ##### Description:
 
@@ -346,12 +337,9 @@ Return a list of containers using the document ID provided
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/document/{id}/containers/relationships
+### Document Container Relationships `/{instance}/resources/document/{id}/containers/relationships`
 
 #### GET
-##### Summary:
-
-Document Container Relationships
 
 ##### Description:
 
@@ -378,12 +366,9 @@ Return a list of the parent-child relationship between each container for the do
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/document/{id}/translations
+### Document Translations `/{instance}/resources/document/{id}/translations`
 
 #### GET
-##### Summary:
-
-Document Translations
 
 ##### Description:
 
@@ -410,12 +395,9 @@ Return a list of all translations (per language and locale) of a Panviva documen
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/file/{id}
+### File `/{instance}/resources/file/{id}`
 
 #### GET
-##### Summary:
-
-File
 
 ##### Description:
 
@@ -442,12 +424,9 @@ Returns a file (external document) from Panviva
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/folder/{id}
+### Folder `/{instance}/resources/folder/{id}`
 
 #### GET
-##### Summary:
-
-Folder
 
 ##### Description:
 
@@ -474,12 +453,9 @@ Return information about a Panviva folder and references to each of its direct c
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/folder/{id}/children
+### Folder Children `/{instance}/resources/folder/{id}/children`
 
 #### GET
-##### Summary:
-
-Folder Children
 
 ##### Description:
 
@@ -506,12 +482,9 @@ Gets all the immediate children of a Panviva folder, not including grandchildren
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/folder/{id}/translations
+### Folder Translations `/{instance}/resources/folder/{id}/translations`
 
 #### GET
-##### Summary:
-
-Folder Translations
 
 ##### Description:
 
@@ -538,12 +511,9 @@ Gets all the translations of a Panviva folder, along with each translated folder
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/folder/root
+### Folder Root `/{instance}/resources/folder/root`
 
 #### GET
-##### Summary:
-
-Folder Root
 
 ##### Description:
 
@@ -569,12 +539,9 @@ Gets the root/home folder in all of Panviva, which can be drilled into using the
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/image/{id}
+### Image `/{instance}/resources/image/{id}`
 
 #### GET
-##### Summary:
-
-Image
 
 ##### Description:
 
@@ -601,12 +568,9 @@ Returns an image from Panviva. Image data is represented as a base64 string
 | 429 | Too many requests - The number of requests has reached the plan’s rate limit. |  |
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
-### /{instance}/resources/artefactcategory
+### Artefact Categories `/{instance}/resources/artefactcategory`
 
 #### GET
-##### Summary:
-
-Get Artefact Categories
 
 ##### Description:
 
@@ -633,9 +597,6 @@ Gets a list of all available artefact categories
 | 503 | Service Unavailable - Panviva servers are under maintenance. |  |
 
 #### POST
-##### Summary:
-
-Create Artefact Category
 
 ##### Description:
 
