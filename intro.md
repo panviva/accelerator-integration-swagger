@@ -50,7 +50,7 @@ To find your quota or rate limit you can:
 The connector supports the following actions:
 
 - [**Search Operations**](#search-operations)
-  - [`Search`](#search-instanceoperationssearch): Search documents, folders, and files (external documents) for a term and returns paginated results
+  - [`Search`](#search-instanceoperationssearch): Search documents, folders, and files (external documents) for a term and return paginated results
   - [`Search Artefacts`](#search-artefacts-instanceoperationsartefactnls): Return search results for a given query
 - [**Live Operations**](#live-operations)
   - [`Live CSH`](#live-csh-instanceoperationslivecsh): Perform a CSH keyword search and present the results on an active user's Panviva client
@@ -65,12 +65,12 @@ The connector supports the following actions:
 - [**Resource Operations**](#resource-operations)
   - [`Artefact`](#artefact-instanceresourcesartefactid): Return an artefact using the ID provided
   - [`Artefact Categories`](#artefact-categories-instanceresourcesartefactcategory): List all available artefact categories
-  - [`File`](#file-instanceresourcesfileid): Returns a file (external document) from Panviva
+  - [`File`](#file-instanceresourcesfileid): Retreive a file (external document) from Panviva
   - [`Folder`](#folder-instanceresourcesfolderid): Return information about a Panviva folder and references to each of its direct children
   - [`Folder Children`](#folder-children-instanceresourcesfolderidchildren): Get all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)
   - [`Folder Translations`](#folder-translations-instanceresourcesfolderidtranslations): Get all the translations of a Panviva folder, along with each translated folders respective children
   - [`Folder Root`](#folder-root-instanceresourcesfolderroot): Get the root/home folder in all of Panviva, which can be drilled into using the Get Folder Children endpoint. Note this endpoint was formerly referred to as the 'Folder Search' endpoint
-  - [`Image`](#image-instanceresourcesimageid): Returns an image from Panviva. Image data is represented as a base64 string
+  - [`Image`](#image-instanceresourcesimageid): Retrieve an image from Panviva. Image data is represented as a base64 string
 
 The above-mentioned actions have been described in detail below.
 

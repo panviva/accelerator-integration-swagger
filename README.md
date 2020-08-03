@@ -32,7 +32,7 @@ paconn create --api-def apiDefinition.swagger.json --api-prop apiProperties.json
 The connector supports the following actions:
 
 - **Search Operations**
-  - `Search`: Search documents, folders, and files (external documents) for a term and returns paginated results
+  - `Search`: Search documents, folders, and files (external documents) for a term and return paginated results
   - `Search Artefacts`: Return search results for a given query
 - **Live Operations**
   - `Live CSH`: Perform a CSH keyword search and present the results on an active user's Panviva client
@@ -47,9 +47,9 @@ The connector supports the following actions:
 - **Resource Operations**
   - `Artefact`: Return an artefact using the ID provided
   - `Artefact Categories`: List all available artefact categories
-  - `File`: Return a file (external document) from Panviva
+  - `File`: Retrieve a file (external document) from Panviva
   - `Folder`: Return information about a Panviva folder and references to each of its direct children
   - `Folder Children`: Get all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)
   - `Folder Translations`: Get all the translations of a Panviva folder, along with each translated folders respective children
   - `Folder Root`: Get the root/home folder in all of Panviva, which can be drilled into using the Get Folder Children endpoint. Note this endpoint was formerly referred to as the 'Folder Search' endpoint
-  - `Image`: Return an image from Panviva. Image data is represented as a base64 string
+  - `Image`: Retrieve an image from Panviva. Image data is represented as a base64 string
