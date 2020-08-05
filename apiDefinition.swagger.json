@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Panviva API Suite v3",
+    "title": "Panviva",
     "version": "1.0",
-    "description": "Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings.\n\n**Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.\n\n**Live APIs** enable real-time communications with online users on our client application.\n\n**Artefact APIs** interact with curated Panviva content, created by the Digital Orchestrator.",
+    "description": "Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings.\n\n**Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.\n\n**Live APIs** enable real-time communications with online users on our client application.\n\n**Artefact APIs** interact with curated Panviva content, created by Digital Orchestrator.",
     "contact": {
       "name": "Panviva Customer Advocacy Team",
       "url": "https://www.panviva.com/support",
@@ -12,9 +12,7 @@
   },
   "host": "api.panviva.com",
   "basePath": "/v3",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "consumes": [],
   "produces": [],
   "x-ms-connector-metadata": [
@@ -35,11 +33,9 @@
     "/{instance}/operations/search": {
       "get": {
         "description": "Searches documents, folders, and files (external documents) for a term and returns paginated results",
-        "operationId": "operationsSearch",
+        "operationId": "OperationsSearch",
         "summary": "Search",
-        "tags": [
-          "Operations"
-        ],
+        "tags": ["Operations"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -77,9 +73,7 @@
             "x-ms-visibility": "advanced"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -97,9 +91,7 @@
                     "description": "The chronicles of Spiderman",
                     "classification": "films",
                     "updatedDate": "2018-05-04T00:00:00Z",
-                    "matchedFields": [
-                      "name"
-                    ],
+                    "matchedFields": ["name"],
                     "snippet": "Spiderman is a super<em>hero</em>",
                     "language": "en-AU",
                     "links": [
@@ -115,9 +107,7 @@
                     "id": "32",
                     "name": "Marvel Trivia",
                     "description": "All things Marvel",
-                    "matchedFields": [
-                      "name"
-                    ],
+                    "matchedFields": ["name"],
                     "snippet": "<em>Marvel</em> Trivia",
                     "language": "en-AU",
                     "links": [
@@ -136,11 +126,7 @@
                     "description": "A book detailing the history of Spiderman",
                     "classification": "books",
                     "updatedDate": "2018-05-04T00:00:00Z",
-                    "matchedFields": [
-                      "content",
-                      "name",
-                      "fileName"
-                    ],
+                    "matchedFields": ["content", "name", "fileName"],
                     "snippet": "Spiderman is a <em>hero</em> born in New York",
                     "language": "en-AU",
                     "links": [
@@ -206,7 +192,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -233,7 +219,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -257,11 +243,9 @@
     "/{instance}/operations/artefact/nls": {
       "get": {
         "description": "Return search results for a given query",
-        "operationId": "operationsArtefactNls",
+        "operationId": "OperationsArtefactNls",
         "summary": "Search Artefacts",
-        "tags": [
-          "Operations"
-        ],
+        "tags": ["Operations"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -330,9 +314,7 @@
             "x-ms-visibility": "advanced"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -361,16 +343,11 @@
                     },
                     "metaData": {
                       "Superheroes": {
-                        "values": [
-                          "Captain America",
-                          "Captain Marvel"
-                        ],
+                        "values": ["Captain America", "Captain Marvel"],
                         "dataType": "string"
                       },
                       "Villains": {
-                        "values": [
-                          "Thanos"
-                        ],
+                        "values": ["Thanos"],
                         "dataType": "string"
                       }
                     },
@@ -421,7 +398,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -448,7 +425,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -472,11 +449,9 @@
     "/{instance}/operations/live/csh": {
       "post": {
         "description": "Present a CSH search result page of the passing query on Panviva client to specified user on Panviva client",
-        "operationId": "operationsLiveCsh",
+        "operationId": "OperationsLiveCsh",
         "summary": "Live CSH",
-        "tags": [
-          "Operations"
-        ],
+        "tags": ["Operations"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -498,12 +473,8 @@
             "x-ms-visibility": "important"
           }
         ],
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
         "responses": {
           "202": {
             "description": "The request has been accepted for processing, but processing has not yet completed. There is a possibility that the request will fail, if it is disallowed when processing actually takes place. There is no facility for sending a completion-status code from this operation.",
@@ -511,7 +482,7 @@
               "$ref": "#/definitions/PostLiveCshResponse"
             },
             "examples": {
-              "application/json": {}
+              "application/json": null
             }
           },
           "400": {
@@ -542,7 +513,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -569,7 +540,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -593,11 +564,9 @@
     "/{instance}/operations/live/document": {
       "post": {
         "description": "Present a document page to specified user on Panviva client",
-        "operationId": "operationsLiveDocument",
+        "operationId": "OperationsLiveDocument",
         "summary": "Live Document",
-        "tags": [
-          "Operations"
-        ],
+        "tags": ["Operations"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -619,12 +588,8 @@
             "x-ms-visibility": "important"
           }
         ],
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
         "responses": {
           "202": {
             "description": "The request has been accepted for processing, but processing has not yet completed. There is a possibility that the request will fail, if it is disallowed when processing actually takes place. There is no facility for sending a completion-status code from this operation.",
@@ -632,7 +597,7 @@
               "$ref": "#/definitions/PostLiveDocumentResponse"
             },
             "examples": {
-              "application/json": {}
+              "application/json": null
             }
           },
           "400": {
@@ -663,7 +628,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -690,7 +655,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -714,11 +679,9 @@
     "/{instance}/operations/live/search": {
       "post": {
         "description": "Present a search result page of the passing query on Panviva client to specified user on Panviva client",
-        "operationId": "operationsLiveSearch",
+        "operationId": "OperationsLiveSearch",
         "summary": "Live Search",
-        "tags": [
-          "Operations"
-        ],
+        "tags": ["Operations"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -740,12 +703,8 @@
             "x-ms-visibility": "important"
           }
         ],
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
         "responses": {
           "202": {
             "description": "The request has been accepted for processing, but processing has not yet completed. There is a possibility that the request will fail, if it is disallowed when processing actually takes place. There is no facility for sending a completion-status code from this operation.",
@@ -753,7 +712,7 @@
               "$ref": "#/definitions/PostLiveSearchResponse"
             },
             "examples": {
-              "application/json": {}
+              "application/json": null
             }
           },
           "400": {
@@ -784,7 +743,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -811,7 +770,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -835,11 +794,9 @@
     "/{instance}/resources/container/{id}": {
       "get": {
         "description": "Return a container using the container ID provided",
-        "operationId": "resourcesContainerById",
+        "operationId": "ResourcesContainerById",
         "summary": "Container",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -862,9 +819,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -907,7 +862,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -934,7 +889,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -958,11 +913,9 @@
     "/{instance}/resources/document/{id}": {
       "get": {
         "description": "Return a document using the document ID provided",
-        "operationId": "resourcesDocumentById",
+        "operationId": "ResourcesDocumentById",
         "summary": "Document",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -993,9 +946,7 @@
             "x-ms-visibility": "advanced"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -1049,10 +1000,7 @@
                   "Black Panter",
                   "Captain Marvel"
                 ],
-                "cshKeywords": [
-                  "Chrome",
-                  "MCU"
-                ],
+                "cshKeywords": ["Chrome", "MCU"],
                 "updatedDate": "2017-09-09T04:12:52.83Z",
                 "createdDate": "2017-08-09T04:02:46.907Z",
                 "reusableContent": false,
@@ -1100,7 +1048,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -1127,7 +1075,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1151,11 +1099,9 @@
     "/{instance}/resources/artefact/{id}": {
       "get": {
         "description": "Return an artefact using the ID provided",
-        "operationId": "resourcesArtefactById",
+        "operationId": "ResourcesArtefactById",
         "summary": "Artefact",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -1178,9 +1124,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -1248,16 +1192,11 @@
                 "panvivaDocumentVersion": 5,
                 "metaData": {
                   "Superheroes": {
-                    "values": [
-                      "Captain America",
-                      "Captain Marvel"
-                    ],
+                    "values": ["Captain America", "Captain Marvel"],
                     "dataType": "string"
                   },
                   "Villains": {
-                    "values": [
-                      "Thanos"
-                    ],
+                    "values": ["Thanos"],
                     "dataType": "string"
                   }
                 },
@@ -1295,7 +1234,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -1322,7 +1261,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1346,11 +1285,9 @@
     "/{instance}/resources/document/{id}/containers": {
       "get": {
         "description": "Return a list of containers using the document ID provided",
-        "operationId": "resourcesDocumentByIdContainers",
+        "operationId": "ResourcesDocumentByIdContainers",
         "summary": "Document Containers",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -1373,9 +1310,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -1432,7 +1367,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -1459,7 +1394,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1483,11 +1418,9 @@
     "/{instance}/resources/document/{id}/containers/relationships": {
       "get": {
         "description": "Return a list of the parent-child relationship between each container for the document ID provided",
-        "operationId": "resourcesDocumentByIdContainersRelationships",
+        "operationId": "ResourcesDocumentByIdContainersRelationships",
         "summary": "Document Container Relationships",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -1510,9 +1443,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -1525,10 +1456,7 @@
                   {
                     "id": "343-229-0-0",
                     "parent": null,
-                    "children": [
-                      "343-229-1-2",
-                      "343-229-3-4"
-                    ],
+                    "children": ["343-229-1-2", "343-229-3-4"],
                     "taskFlow": null
                   },
                   {
@@ -1575,7 +1503,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -1602,7 +1530,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1625,11 +1553,9 @@
     "/{instance}/resources/document/{id}/translations": {
       "get": {
         "description": "Return a list of all translations (per language and locale) of a Panviva document",
-        "operationId": "resourcesDocumentByIdTranslations",
+        "operationId": "ResourcesDocumentByIdTranslations",
         "summary": "Document Translations",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -1652,9 +1578,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -1666,8 +1590,8 @@
                 "translations": [
                   {
                     "id": "568",
-                    "name": "Univers cin\u00c3\u00a9matographique Marvel. (Films)",
-                    "description": "Marvel Cinematic Universe (MCU) est une franchise de m\u00e9dias am\u00e9ricains et un univers partag\u00e9 centr\u00e9 sur une s\u00e9rie de films de super h\u00e9ros.",
+                    "name": "Univers cinÃ©matographique Marvel. (Films)",
+                    "description": "Marvel Cinematic Universe (MCU) est une franchise de médias américains et un univers partagé centré sur une série de films de super héros.",
                     "version": 52,
                     "language": "fr-FR",
                     "tags": [
@@ -1695,7 +1619,7 @@
                       "forcePageSequence": true,
                       "forceQuestionSequence": true,
                       "passingScore": 10,
-                      "successFeedback": "Un grand pouvoir implique de grandes responsabilit\u00e9s"
+                      "successFeedback": "Un grand pouvoir implique de grandes responsabilités"
                     },
                     "keywords": [
                       "Iron Man",
@@ -1710,10 +1634,7 @@
                       "Black Panter",
                       "Captain Marvel"
                     ],
-                    "cshKeywords": [
-                      "Chrome",
-                      "MCU"
-                    ],
+                    "cshKeywords": ["Chrome", "MCU"],
                     "updatedDate": "2017-09-09T04:12:52.83Z",
                     "createdDate": "2017-08-09T04:02:46.907Z",
                     "reusableContent": false,
@@ -1759,7 +1680,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -1786,7 +1707,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1810,11 +1731,9 @@
     "/{instance}/resources/file/{id}": {
       "get": {
         "description": "Returns a file (external document) from Panviva",
-        "operationId": "resourcesFileById",
+        "operationId": "ResourcesFileById",
         "summary": "File",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -1837,9 +1756,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -1870,13 +1787,8 @@
                 "status": "released",
                 "percentage": 100,
                 "releaseDate": "2019-01-30T17:00:53.563Z",
-                "keywords": [
-                  "general info",
-                  "series"
-                ],
-                "cshKeywords": [
-                  "series"
-                ],
+                "keywords": ["general info", "series"],
+                "cshKeywords": ["series"],
                 "changeNote": "Uploaded linked document.",
                 "updatedDate": "2019-01-30T17:00:53.563Z",
                 "createdDate": "2019-01-30T16:54:51.637Z"
@@ -1911,7 +1823,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -1938,7 +1850,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1962,11 +1874,9 @@
     "/{instance}/resources/folder/{id}": {
       "get": {
         "description": "Return information about a Panviva folder and references to each of its direct children",
-        "operationId": "resourcesFolderById",
+        "operationId": "ResourcesFolderById",
         "summary": "Folder",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -1989,9 +1899,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -2060,7 +1968,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -2087,7 +1995,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2111,11 +2019,9 @@
     "/{instance}/resources/folder/{id}/children": {
       "get": {
         "description": "Gets all the immediate children of a Panviva folder, not including grandchildren. Children can be folders, documents, or files (external documents)",
-        "operationId": "resourcesFolderByIdChildren",
+        "operationId": "ResourcesFolderByIdChildren",
         "summary": "Folder Children",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -2138,9 +2044,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -2202,7 +2106,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -2229,7 +2133,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2253,11 +2157,9 @@
     "/{instance}/resources/folder/{id}/translations": {
       "get": {
         "description": "Gets all the translations of a Panviva folder, along with each translated folders respective children",
-        "operationId": "resourcesFolderByIdTranslations",
+        "operationId": "ResourcesFolderByIdTranslations",
         "summary": "Folder Translations",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -2280,9 +2182,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -2355,7 +2255,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -2382,7 +2282,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2406,11 +2306,9 @@
     "/{instance}/resources/folder/root": {
       "get": {
         "description": "Gets the root/home folder in all of Panviva, which can be drilled into using the Get Folder Children endpoint. Note this endpoint was formerly referred to as the 'Folder Search' endpoint",
-        "operationId": "resourcesFolderRoot",
+        "operationId": "ResourcesFolderRoot",
         "summary": "Folder Root",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -2423,9 +2321,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -2494,7 +2390,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -2521,7 +2417,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2545,11 +2441,9 @@
     "/{instance}/resources/image/{id}": {
       "get": {
         "description": "Returns an image from Panviva. Image data is represented as a base64 string",
-        "operationId": "resourcesImageById",
+        "operationId": "ResourcesImageById",
         "summary": "Image",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -2572,9 +2466,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -2621,7 +2513,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -2648,7 +2540,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2672,11 +2564,9 @@
     "/{instance}/resources/artefactcategory": {
       "get": {
         "description": "Gets a list of all available artefact categories",
-        "operationId": "resourcesArtefactCategoriesGet",
+        "operationId": "ResourcesArtefactCategoriesGet",
         "summary": "Get Artefact Categories",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -2689,9 +2579,7 @@
             "x-ms-visibility": "important"
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "The operation is successful and returns with the requested resource. An example of a successful response can be seen in the Sample payload.",
@@ -2737,7 +2625,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -2764,7 +2652,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2786,11 +2674,9 @@
       },
       "post": {
         "description": "Creates a category for classifying artefacts",
-        "operationId": "resourcesArtefactCategoryPost",
+        "operationId": "ResourcesArtefactCategoryPost",
         "summary": "Create Artefact Category",
-        "tags": [
-          "Resources"
-        ],
+        "tags": ["Resources"],
         "parameters": [
           {
             "x-ms-summary": "Instance",
@@ -2811,12 +2697,8 @@
             "description": "JSON object containing the category name"
           }
         ],
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
         "responses": {
           "201": {
             "description": "Success",
@@ -2858,7 +2740,7 @@
             }
           },
           "405": {
-            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI. ",
+            "description": "Method Not Allowed - The method specified in the request is not allowed for the resource identified by the request URI.",
             "examples": {
               "application/json": {
                 "errorCode": "405",
@@ -2885,7 +2767,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan\u2019s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -3958,8 +3840,6 @@
       }
     }
   },
-  "parameters": {},
-  "responses": {},
   "securityDefinitions": {
     "apiKeyHeader": {
       "type": "apiKey",
