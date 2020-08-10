@@ -37,7 +37,7 @@ To get your API instance you must:
 2. Navigate to your API (click "APIs" from the top navigation bar)
 3. You should now see your API instance under your API suite (look for "_The instance name for the API Suite is_")
 
-## Known issues and limitations
+## Throttling limits
 
 Note that your throttling limits will be based on the type of API subscription (or API plan) to which you've subscribed.
 
