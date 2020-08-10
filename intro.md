@@ -1,10 +1,13 @@
 # Panviva
 
-Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings within your application, or in your process automation. Explore the following APIs with this connector:
+Need to stay on top of changes to important content? Or push your information to multiple platforms (CRM, Social media etc.)?
 
-- **Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.
-- **Live APIs** enable real-time communication with online users on our client application.
-- **Artefact APIs** interact with curated Panviva content, created by Digital Orchestrator.
+This connector allows you to do exactly that and much more — you are only as limited as your imagination. Create actions and tasks without the need for any coding experience.
+
+With our connector you can:
+- Set up real-time information change notifications to inform you on platforms like SMS, Teams, Slack or email.
+- Export documents to different formats
+- Power your bots with governed knowledge and information
 
 ## Prerequisites
 
