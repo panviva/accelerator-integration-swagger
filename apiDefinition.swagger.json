@@ -261,7 +261,7 @@
             "x-ms-summary": "Simple Query",
             "name": "simplequery",
             "in": "query",
-            "description": "Natural language query string. For example: ```Action Movies```. (Note: Use simplequery OR advancedquery, not both.)",
+            "description": "Natural language query string. For example: 'Action Movies'. (Note: Use simplequery OR advancedquery, not both.)",
             "type": "string",
             "x-ms-visibility": "important"
           },
@@ -269,7 +269,7 @@
             "x-ms-summary": "Advanced Query",
             "name": "advancedquery",
             "in": "query",
-            "description": "Query string written in Lucene query syntax. For example: ```films AND \"a story\"```. (Note: Use simplequery OR advancedquery, not both.)",
+            "description": "Query string written in Lucene query syntax. For example: 'films AND \"a story\"'. (Note: Use simplequery OR advancedquery, not both.)",
             "type": "string",
             "x-ms-visibility": "advanced"
           },
@@ -277,7 +277,7 @@
             "x-ms-summary": "Filter",
             "name": "filter",
             "in": "query",
-            "description": "Accepts a Lucene-formatted filter string. Examples: ```category eq 'Mortgages'```, ```panvivaDocumentVersion gt '8'```. (Filterable fields include dateCreated, dateModified, dateDeleted, categoryJson, queryVariationsJson, title, category, primaryQuery, isDeleted, timestamp, panvivaDocumentId, panvivaDocumentVersion, id)",
+            "description": "Accepts a Lucene-formatted filter string. Examples: 'category eq \"Mortgages\"', 'panvivaDocumentVersion gt \"8\"'. (Filterable fields include dateCreated, dateModified, dateDeleted, categoryJson, queryVariationsJson, title, category, primaryQuery, isDeleted, timestamp, panvivaDocumentId, panvivaDocumentVersion, id)",
             "type": "string",
             "x-ms-visibility": "advanced"
           },
@@ -309,7 +309,7 @@
             "x-ms-summary": "Facet",
             "name": "facet",
             "in": "query",
-            "description": "Accepts a Lucene-formatted facet string. Examples: ```facet=Category,count:10&amp;facet=Rating```. (Facetable fields include metaData/values)",
+            "description": "Accepts a Lucene-formatted facet string. Examples: 'facet=Category,count:10&facet=Rating'. (Facetable fields include metaData/values)",
             "type": "string",
             "x-ms-visibility": "advanced"
           }
