@@ -219,7 +219,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -425,7 +425,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -540,7 +540,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -655,7 +655,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -770,7 +770,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -889,7 +889,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1075,7 +1075,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1261,7 +1261,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1394,7 +1394,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1530,7 +1530,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1590,8 +1590,8 @@
                 "translations": [
                   {
                     "id": "568",
-                    "name": "Univers cinÃ©matographique Marvel. (Films)",
-                    "description": "Marvel Cinematic Universe (MCU) est une franchise de médias américains et un univers partagé centré sur une série de films de super héros.",
+                    "name": "Univers cinematographique Marvel. (Films)",
+                    "description": "Marvel Cinematic Universe (MCU) est une franchise de medias americains et un univers partage centre sur une serie de films de super heros.",
                     "version": 52,
                     "language": "fr-FR",
                     "tags": [
@@ -1619,7 +1619,7 @@
                       "forcePageSequence": true,
                       "forceQuestionSequence": true,
                       "passingScore": 10,
-                      "successFeedback": "Un grand pouvoir implique de grandes responsabilités"
+                      "successFeedback": "Un grand pouvoir implique de grandes responsabilites"
                     },
                     "keywords": [
                       "Iron Man",
@@ -1707,7 +1707,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1850,7 +1850,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1995,7 +1995,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2133,7 +2133,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2282,7 +2282,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2417,7 +2417,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2540,7 +2540,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2652,7 +2652,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2767,7 +2767,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
