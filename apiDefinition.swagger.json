@@ -2082,12 +2082,12 @@
                 "type": "folder",
                 "links": [
                   {
-                    "href": "https://dev.panviva.com/v3/viva-bank/resources/folder/342/children",
+                    "href": "https://api.panviva.com/v3/viva-bank/resources/folder/342/children",
                     "rel": "children",
                     "type": "GET"
                   },
                   {
-                    "href": "https://dev.panviva.com/v3/viva-bank/resources/folder/342/translations",
+                    "href": "https://api.panviva.com/v3/viva-bank/resources/folder/342/translations",
                     "rel": "translations",
                     "type": "GET"
                   }
@@ -2367,12 +2367,12 @@
                     "type": "folder",
                     "links": [
                       {
-                        "href": "https://dev.panviva.com/v3/viva-bank/resources/folder/84374/translations",
+                        "href": "https://api.panviva.com/v3/viva-bank/resources/folder/84374/translations",
                         "rel": "translations",
                         "type": "GET"
                       },
                       {
-                        "href": "https://dev.panviva.com/v3/viva-bank/resources/folder/84374/children",
+                        "href": "https://api.panviva.com/v3/viva-bank/resources/folder/84374/children",
                         "rel": "children",
                         "type": "GET"
                       }
@@ -2504,12 +2504,12 @@
                 "type": "folder",
                 "links": [
                   {
-                    "href": "https://dev.panviva.com/v3/viva-bank/resources/folder/84374/translations",
+                    "href": "https://api.panviva.com/v3/viva-bank/resources/folder/84374/translations",
                     "rel": "translations",
                     "type": "GET"
                   },
                   {
-                    "href": "https://dev.panviva.com/v3/viva-bank/resources/folder/84374/children",
+                    "href": "https://api.panviva.com/v3/viva-bank/resources/folder/84374/children",
                     "rel": "children",
                     "type": "GET"
                   }
