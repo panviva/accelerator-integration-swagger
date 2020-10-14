@@ -1,6 +1,6 @@
 # Panviva
 
-Panviva allows your business to leverage knowledge across multiple channels. Connect to your knowledgebase and ensure that information is pushed to those who need it the most, and allow staff to pull knowledge in their moments of need.
+Panviva is an omnichannel knowledge management solution. Our priority is to aid our clients in keeping employees their happy, so that they can focus on ensuring their customers are happy. Digitally transforming organisations for the last 20 years, we're now helping our customers to deliver knowledge nuggets to their employees and customers, whether they are in the home or the office - anytime and anywhere.
 
 ## Prerequisites
 
