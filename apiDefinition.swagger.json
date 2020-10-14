@@ -3,7 +3,7 @@
   "info": {
     "title": "Panviva",
     "version": "1.0",
-    "description": "Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings.\n\n**Content APIs** perform resource related operations , e.g. `document`, `folder`, `file`, `container`, `image`.\n\n**Live APIs** enable real-time communications with online users on our client application.\n\n**Artefact APIs** interact with curated Panviva content, created by Digital Orchestrator.",
+    "description": "Wouldn't it be great if you could share information seamlessly? This connector allows you to push your knowledge further and consume a complete list of Panviva's API offerings. Use Content APIs to perform resource related operations on 'document', 'folder', 'file', 'container', 'image' resources. Use Live APIs to enable real-time communications with online users on our client application. Use Artefact APIs interact with curated Panviva content, created by Digital Orchestrator.",
     "contact": {
       "name": "Panviva Customer Advocacy Team",
       "url": "https://www.panviva.com/support",
@@ -217,7 +217,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -259,7 +259,7 @@
             "x-ms-summary": "Simple Query",
             "name": "simplequery",
             "in": "query",
-            "description": "Natural language query string. For example: ```Action Movies```. (Note: Use simplequery OR advancedquery, not both.)",
+            "description": "Natural language query string. For example: 'Action Movies'. (Note: Use simplequery OR advancedquery, not both.)",
             "type": "string",
             "x-ms-visibility": "important"
           },
@@ -267,7 +267,7 @@
             "x-ms-summary": "Advanced Query",
             "name": "advancedquery",
             "in": "query",
-            "description": "Query string written in Lucene query syntax. For example: ```films AND \"a story\"```. (Note: Use simplequery OR advancedquery, not both.)",
+            "description": "Query string written in Lucene query syntax. For example: 'films AND \"a story\"'. (Note: Use simplequery OR advancedquery, not both.)",
             "type": "string",
             "x-ms-visibility": "advanced"
           },
@@ -275,7 +275,7 @@
             "x-ms-summary": "Filter",
             "name": "filter",
             "in": "query",
-            "description": "Accepts a Lucene-formatted filter string. Examples: ```category eq 'Mortgages'```, ```panvivaDocumentVersion gt '8'```. (Filterable fields include dateCreated, dateModified, dateDeleted, categoryJson, queryVariationsJson, title, category, primaryQuery, isDeleted, timestamp, panvivaDocumentId, panvivaDocumentVersion, id)",
+            "description": "Accepts a Lucene-formatted filter string. Examples: 'category eq \"Mortgages\"', 'panvivaDocumentVersion gt \"8\"'. (Filterable fields include dateCreated, dateModified, dateDeleted, categoryJson, queryVariationsJson, title, category, primaryQuery, isDeleted, timestamp, panvivaDocumentId, panvivaDocumentVersion, id)",
             "type": "string",
             "x-ms-visibility": "advanced"
           },
@@ -307,7 +307,7 @@
             "x-ms-summary": "Facet",
             "name": "facet",
             "in": "query",
-            "description": "Accepts a Lucene-formatted facet string. Examples: ```facet=Category,count:10&amp;facet=Rating```. (Facetable fields include metaData/values)",
+            "description": "Accepts a Lucene-formatted facet string. Examples: 'facet=Category,count:10&facet=Rating'. (Facetable fields include metaData/values)",
             "type": "string",
             "x-ms-visibility": "advanced"
           }
@@ -575,7 +575,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -693,7 +693,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -811,7 +811,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -929,7 +929,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1048,7 +1048,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1207,7 +1207,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1381,7 +1381,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1554,7 +1554,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1745,7 +1745,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -1862,7 +1862,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2005,7 +2005,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2150,7 +2150,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2288,7 +2288,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2437,7 +2437,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2572,7 +2572,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2695,7 +2695,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2847,7 +2847,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
@@ -2962,7 +2962,7 @@
             }
           },
           "429": {
-            "description": "Too many requests - The number of requests has reached the plan’s rate limit.",
+            "description": "Too many requests - The number of requests has reached the plan's rate limit.",
             "examples": {
               "application/json": {
                 "errorCode": "429",
