@@ -359,10 +359,6 @@
                       "type": {
                         "values": ["Lending"],
                         "dataType": "string"
-                      },
-                      "scope": {
-                        "values": null,
-                        "dataType": null
                       }
                     },
                     "searchScore": 1.2721065,
@@ -420,10 +416,6 @@
                       "type": {
                         "values": ["Lending"],
                         "dataType": "string"
-                      },
-                      "scope": {
-                        "values": null,
-                        "dataType": null
                       }
                     },
                     "searchScore": 0.26734138,
@@ -488,10 +480,6 @@
                         "dataType": null
                       },
                       "type": {
-                        "values": null,
-                        "dataType": null
-                      },
-                      "scope": {
                         "values": null,
                         "dataType": null
                       }
@@ -1119,7 +1107,16 @@
                 "description": "This describes how to setup your Virtual Personal Assistant for vivabank.",
                 "version": 6,
                 "language": "en-US",
-                "tags": null,
+                "tags": [
+                  {
+                    "name": "Rank",
+                    "value": "1"
+                  },
+                  {
+                    "name": "Effective date",
+                    "value": "2020-05-04T00:00:00Z"
+                  }
+                ],
                 "hidden": false,
                 "type": "document",
                 "release": 6,
@@ -1131,8 +1128,8 @@
                 "releaseDate": "2020-03-06T13:00:00Z",
                 "layout": "topTabsSmall",
                 "training": null,
-                "keywords": ["keyword 1", "keyword 2", "keyword3"],
-                "cshKeywords": null,
+                "keywords": ["keyword1", "keyword2", "keyword3"],
+                "cshKeywords": ["cshkeyword1", "cshkeyword2", "cshkeyword3"],
                 "updatedDate": "2020-03-31T00:35:30.757Z",
                 "createdDate": "2020-03-06T16:21:05.787Z",
                 "reusableContent": null,
@@ -1289,7 +1286,12 @@
                   "dateModified": "2020-03-10T19:10:19.457+00:00"
                 },
                 "primaryQuery": "What are some common VPA banking commands?",
-                "queryVariations": [],
+                "queryVariations": [
+                  {
+                    "id": 12,
+                    "query": "Quick commands?"
+                  }
+                ],
                 "panvivaDocumentId": 648,
                 "panvivaDocumentVersion": 3,
                 "metaData": {
@@ -1314,10 +1316,6 @@
                   "type": {
                     "values": ["Lending", "Deposit"],
                     "dataType": "string"
-                  },
-                  "scope": {
-                    "values": null,
-                    "dataType": null
                   }
                 },
                 "id": "b014a024-d246-4da0-89b5-c53e710fed4c",
